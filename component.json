@@ -1,0 +1,15 @@
+{
+  "name": "css.js",
+  "repo": "microjs/css.js",
+  "description": "JavaScript dynamic stylesheets",
+  "version": "0.0.2",
+  "keywords": ["util", "css", "style", "stylesheets", "dynamic", "client", "browser"],
+  "dependencies": {},
+  "development": {},
+  "scripts": [
+    "cssjs.js"
+  ],
+  "main": "cssjs.js",
+  "twitter": "@ForbesLindesay",
+  "license": "MIT"
+}
