@@ -25,28 +25,18 @@ Selector.prototype.getName = function() {
 };
 
 Selector.prototype.properties = function(properties) {
+  if (!properties) {
+    return this.props;
+  }
   extend(this.props, properties);
-  this.refresh();
-  return this;
-};
-
-Selector.prototype.refresh = function() {
-  var props = this.props;
   var parts = [];
-  for (var name in props) {
-    if (props.hasOwnProperty(name)) {
-      parts.push(name + ":" + props[name]);
+  for (var name in this.props) {
+    if (this.props.hasOwnProperty(name)) {
+      parts.push(name + ":" + this.props[name]);
     }
   }
   this.node.nodeValue = this.name + " { " + (parts.join(';')) + "; }";
-};
-
-Selector.prototype.getNode = function() {
-  return this.node;
-};
-
-Selector.prototype.selector = function(name, properties) {
-  return this.sheet.selector(name, properties);
+  return this;
 };
 
 Selector.prototype.remove = function() {
@@ -64,7 +54,7 @@ Sheet.prototype.selector = function(name, properties) {
   var selector;
   if (!this.selectors[name]) {
     selector = this.selectors[name] = new Selector(name, this);
-    this.node.appendChild(selector.getNode());
+    this.node.appendChild(selector.node);
   } else {
     selector = this.selectors[name];
   }
@@ -81,12 +71,12 @@ Sheet.prototype.remove = function(selector) {
     delete this.properties;
     return null;
   }
-  if (typeof selector === 'string' && this.selector[selector]) {
-    this.node.removeChild(this.selectors[selector].getNode());
+  if (typeof selector === 'string' && this.selectors[selector]) {
+    this.node.removeChild(this.selectors[selector].node);
     delete this.selectors[selector];
   }
   if (typeof selector === 'object') {
-    this.node.removeChild(selector.getNode());
+    this.node.removeChild(selector.node);
     delete this.selectors[selector.getName()];
   }
   return this;

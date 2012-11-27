@@ -20,15 +20,15 @@ document.createTextNode = function (text) {
 
 exports.StyleElement = StyleElement;
 function StyleElement() {
-  var children = [];
-  elementChildren.push([this, children]);
+  var children = [this, []];
+  elementChildren.push(children);
   this.type = '';
   this.appendChild = function (node) {
     node.parentNode = this;
-    children.push(node);
+    children[1].push(node);
   };
   this.removeChild = function (node) {
-    children = children
+    children[1] = children[1]
       .filter(function (n) {
         return n != node;
       });

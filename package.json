@@ -8,6 +8,7 @@
   "private": true,
   "devDependencies": {
     "expect.js": "~0.2.0",
-    "mocha": "~1.7.1"
+    "mocha": "~1.7.1",
+    "bunker": "~0.1.2"
   }
 }
