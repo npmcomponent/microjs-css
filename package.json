@@ -1,10 +1,13 @@
 {
-  "name"          : "css.js",
-  "description"   : "Dynamic stylesheets",
-  "homepage"      : "https://github.com/radmen/css.js",
-  "keywords"      : ["util", "css", "client", "browser"],
-  "author"        : "Radoslaw Mejer <radmen@gmail.com>",
-  "repository"    : {"type": "git", "url": "git://github.com/radmen/css.js.git"},
-  "main"          : "cssjs.js",
-  "version"       : "0.0.2"
+  "name": "css",
+  "description": "Dynamic stylesheets",
+  "version": "0.0.2",
+  "scripts": {
+    "test": "mocha -R spec --globals document"
+  },
+  "private": true,
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "mocha": "~1.7.1"
+  }
 }
