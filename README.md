@@ -1,15 +1,20 @@
-css.js
-======
+[![Build Status](https://secure.travis-ci.org/microjs/css.png?branch=master)](https://travis-ci.org/microjs/css)
+# css
 
-JavaScript dynamic stylesheets
+  JavaScript dynamic stylesheets
 
-usage
-=====
+## Installation
 
-Basic usage.
+    $ component install microjs/css
+
+## Usage
+
+  Basic usage.
 
 ```javascript
-var sheet = cssjs.newSheet();
+var css = require('css');
+
+var sheet = css.newSheet();
 sheet
   .selector('div.test', {
     'float': 'left',
@@ -20,7 +25,7 @@ sheet
   });
 ```      
   
-Selectors can be used later.
+  Selectors can be used later.
 
 ```javascript
 var div_css = sheet.selector('div.test');
@@ -30,27 +35,19 @@ div_css.properties({
 });
 ```
     
-Remove selector properties.
+  Remove selector properties.
   
 ```javascript
 sheet.remove('div.test');
 sheet.remove(div_css);
 ```
     
-Remove sheet.
+  Remove sheet.
   
 ```javascript
 sheet.remove();
 ```
 
-Copyright and Licensing
-=======================
+## License
 
-Copyright (c) 2012 Radosław Mejer, released under the MIT license.
-
-todo
-====
-
-* compatibility check
-* unit testing
-* ...?
+  MIT
