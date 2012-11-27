@@ -2,8 +2,14 @@
   "name": "css",
   "repo": "microjs/css",
   "description": "JavaScript dynamic stylesheets",
-  "version": "0.0.2",
-  "keywords": ["util", "css", "style", "stylesheets", "dynamic"],
+  "version": "1.0.0",
+  "keywords": [
+    "util",
+    "css",
+    "style",
+    "stylesheets",
+    "dynamic"
+  ],
   "dependencies": {},
   "development": {},
   "scripts": [

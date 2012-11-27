@@ -1,7 +1,7 @@
 {
   "name": "css",
   "description": "Dynamic stylesheets",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "scripts": {
     "test": "mocha -R spec --globals document"
   },
