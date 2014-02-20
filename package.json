@@ -1,14 +1,14 @@
 {
-  "name": "css",
-  "description": "Dynamic stylesheets",
+  "name": "microjs-css",
+  "description": "JavaScript dynamic stylesheets",
   "version": "1.0.0",
-  "scripts": {
-    "test": "mocha -R spec --globals document"
-  },
-  "private": true,
-  "devDependencies": {
-    "expect.js": "~0.2.0",
-    "mocha": "~1.7.1",
-    "bunker": "~0.1.2"
-  }
+  "keywords": [
+    "util",
+    "css",
+    "style",
+    "stylesheets",
+    "dynamic"
+  ],
+  "dependencies": {},
+  "license": "MIT"
 }
